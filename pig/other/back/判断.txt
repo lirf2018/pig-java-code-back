@@ -1,0 +1,20 @@
+source /etc/profile
+###每日
+DATE=$(date +"%Y-%m-%d" -d "$1-1day");
+echo "${DATE}"
+#通讯日报、月报
+hdfs dfs -test -e /user/datum/uhuibao/report_day/product/${DATE}
+if [ $? -eq 0 ]
+	then
+	echo "product_day exists"
+else
+	sh /home/datum/uhuibao/shell/report/date/product.sh ${DATE}
+fi
+
+hdfs dfs -test -e /user/datum/uhuibao/report_month/product/${DATE}
+if [ $? -eq 0 ]
+	then
+	echo "product_month exists"
+else
+	sh /home/datum/uhuibao/shell/report/month/product_month.sh ${DATE}
+fi

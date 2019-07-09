@@ -1,0 +1,8 @@
+-- 资讯类别店铺(资讯Id,资讯名称,类别id,类别名称,店铺Id,店铺名称)
+SELECT t1.news_id, t1.news_title, t2.category_id, t3.cate_name, t4.shop_id, t5.shop_name FROM tb_info_news t1 LEFT JOIN tb_info_category_rela t2 ON t1.news_id=t2.thing_id LEFT JOIN tb_info_new_category t3 ON t2.category_id=t3.category_id LEFT JOIN tb_info_news_shop t4 ON t1.news_id=t4.news_id LEFT JOIN tb_info_shop t5 ON t4.shop_id=t5.shop_id;
+-- 资讯地区(资讯Id,资讯名称,地区id,地区编码,地区名称)
+SELECT t1.news_id, t1.news_title, t3.area_id, t2.area_code, t3.area_name FROM tb_info_news t1 LEFT JOIN tb_info_news_area_rela t2 ON t1.news_id=t2.news_id LEFT JOIN tb_info_area t3 ON t2.area_code = t3.area_code;
+-- 资讯渠道(资讯Id,资讯名称,渠道id,渠道编码,渠道名称)
+SELECT t1.news_id, t1.news_title, t2.chan_id, t3.chan_code, t3.chan_name FROM tb_info_news t1 LEFT JOIN tb_info_news_channel t2 ON t1.news_id=t2.news_id LEFT JOIN tb_info_channel t3 ON t2.chan_id=t3.chan_id;
+
+

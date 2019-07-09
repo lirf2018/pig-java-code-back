@@ -1,0 +1,81 @@
+create sequence tb_article_detail_mreport_id_seq increment by 1 minvalue 1 no maxvalue start with 1;
+
+create table tb_article_detail_mreport (
+	id int not null default nextval('tb_article_detail_mreport_id_seq') primary key,
+	article_id int,
+	article_name varchar(200),
+	link varchar(200),
+	pv int,
+	uv int,
+	collect_count int,
+	share_count int,
+	shop varchar(200),
+	type varchar(100),
+	area_code varchar(100),
+	channel_code varchar(500),
+	log_time date
+);
+
+create sequence tb_h5_channel_id_seq increment by 1 minvalue 1 no maxvalue start with 1;
+create table tb_h5_channel(
+	id int not null default nextval('tb_h5_channel_id_seq') primary key,
+	channel_code varchar(50),
+	channel_name varchar(100)
+);
+
+create table tb_h5_type(
+	type_id int primary key,
+	type_name varchar(100)
+);
+
+create table tb_h5_shop(
+	shop_id int primary key,
+	shop_name varchar(100)
+);
+
+create table tb_h5_area(
+	area_code varchar(50) primary key,
+	area_name varchar(100)
+);
+
+
+-- 第二次更新
+create sequence tb_ticket_detail_mreport_id_seq increment by 1 minvalue 1 no maxvalue start with 1;
+
+create table tb_ticket_detail_mreport (
+	id int not null default nextval('tb_ticket_detail_mreport_id_seq') primary key,
+	ticket_id int,
+	ticket_name varchar(200),
+	ticket_kc int,
+	pv int,
+	uv int,
+	exchannge_count int,
+	get_count int,
+	start_time timestamp,
+	end_time timestamp ,
+	ticket_count int,
+	shop varchar(200),
+	type varchar(100),
+	channel_code varchar(500),
+	log_time date
+);
+
+-- 第三次更新
+create sequence tb_shopcard_detail_mreport_id_seq increment by 1 minvalue 1 no maxvalue start with 1;
+
+create table tb_shopcard_detail_mreport (
+	id int not null default nextval('tb_shopcard_detail_mreport_id_seq') primary key,
+	shopcard_id int,
+	shopcard_name varchar(200),	
+	pv int,
+	uv int,
+	shopcard_count int,
+	area_code varchar(200),
+	channel_code varchar(500),
+	log_time date
+);
+
+
+
+drop table tb_shopcard_detail_mreport,tb_ticket_detail_mreport,tb_article_detail_mreport;
+drop sequence tb_shopcard_detail_mreport_id_seq,tb_ticket_detail_mreport_id_seq,tb_article_detail_mreport_id_seq;

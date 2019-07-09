@@ -1,0 +1,6 @@
+Manifest-Version: 1.0
+Class-Path: . big-data-tool-uhuibao_lib/postgresql-9.3-1102-jdbc41.jar
+  big-data-tool-uhuibao_lib/c3p0-0.9.1.2.jar big-data-tool-uhuibao_lib
+ /log4j-1.2.14.jar
+Main-Class: com.yufan.tool.action.MainAction
+

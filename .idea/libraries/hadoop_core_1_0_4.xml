@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="hadoop-core-1.0.4">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/hadoop-core-1.0.4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/pig-0.16.0-core-h1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/pig-0.16.0-core-h2.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

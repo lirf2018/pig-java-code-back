@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="pig-java-code:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/pig_java_code_jar</output-path>
+    <root id="archive" name="pig-java-code.jar">
+      <element id="module-output" name="pig-java-code1" />
+    </root>
+  </artifact>
+</component>
